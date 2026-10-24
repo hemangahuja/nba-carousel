@@ -1,0 +1,30 @@
+{
+  "name": "NBA Stream Carousel",
+  "version": "1.2.0",
+  "description": "Pick live NBA games and turn them into a full-screen arrow-key carousel with per-stream quality",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.nba.com/*",
+    "https://*.nba.com/*"
+  ],
+  "action": {
+    "default_title": "Pick live NBA games",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nba.com/*", "https://*.nba.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

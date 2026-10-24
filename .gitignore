@@ -1,0 +1,29 @@
+# Local credentials and runtime captures
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.har
+*.log
+*.jsonl
+cookies*.json
+*token*.json
+*credentials*.json
+*profile*/
+cdp/
+data/
+scratch/
+
+# Dependencies, build output, and packaged extensions
+node_modules/
+dist/
+*.crx
+*.zip
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
